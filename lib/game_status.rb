@@ -31,7 +31,7 @@ def over?(board)
   won?(board) || draw?(board)
 end
 
-# return winning combination of win_combinations else false
+# return winning combination else false
 def won?(board)
   WIN_COMBINATIONS.each do |combination|
     p1 = board[combination[0]]
@@ -45,10 +45,9 @@ def won?(board)
   false
 end
 
+# if won? return winning player's token else false
 def winner(board)
   winning_combo = won?(board)
-  if winning_combo
-    board[winning_combo[0]]
-  end
+  if winning_combo then board[winning_combo[0]] end
 end
 
